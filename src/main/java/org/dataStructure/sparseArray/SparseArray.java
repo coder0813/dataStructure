@@ -2,10 +2,13 @@ package org.dataStructure.sparseArray;
 
 public class SparseArray {
 
+
+    private static final int ARRAY_HEIGHT = 11;
+    private static final int ARRAY_WIDTH = 11;
+
     public static void main(String[] args) {
         int[][] chessArray = creatChessArray();
         output2DArray(chessArray);
-
         int[][] spareArray = creatSpareArray(chessArray);
         output2DArray(spareArray);
         int[][] recoverySpareArrayTo2DArray = recoverySpareArrayTo2DArray(spareArray);
@@ -14,7 +17,7 @@ public class SparseArray {
 
 
     public static int[][] creatChessArray() {
-        int[][] chessArray = new int[11][11];
+        int[][] chessArray = new int[ARRAY_WIDTH][ARRAY_HEIGHT];
         chessArray[1][1] = 1;
         chessArray[3][4] = 2;
         chessArray[8][7] = 1;
@@ -41,13 +44,13 @@ public class SparseArray {
             }
         }
         int[][] spareArray = new int[sum + 1][3];
-        spareArray[0][0] = 11;
-        spareArray[0][1] = 11;
+        spareArray[0][0] = ARRAY_WIDTH;
+        spareArray[0][1] = ARRAY_HEIGHT;
         spareArray[0][2] = sum;
 
         int count = 0;
-        for (int i = 0; i < 11; i++) {
-            for (int j = 0; j < 11; j++) {
+        for (int i = 0; i < ARRAY_WIDTH; i++) {
+            for (int j = 0; j < ARRAY_HEIGHT; j++) {
                 if (chessArray[i][j] != 0) {
                     count++;
                     spareArray[count][0] = i;
