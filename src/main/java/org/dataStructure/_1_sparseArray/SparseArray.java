@@ -1,4 +1,4 @@
-package org.dataStructure.sparseArray;
+package org.dataStructure._1_sparseArray;
 
 public class SparseArray {
 

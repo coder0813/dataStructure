@@ -1,4 +1,4 @@
-package org.dataStructure.queue;
+package org.dataStructure._2_queue;
 
 public class CircleArrayQueue {
 

@@ -1,18 +1,18 @@
-package org.dataStructure.queue;
+package org.dataStructure._2_queue;
 
 import java.util.Scanner;
 
-public class ArrayQueueDemo {
+public class CircleArrayQueueDemo {
 
     public static void main(String[] args) {
 
-        queueDemo();
+        CircleQueueDemo();
     }
 
-    public static void queueDemo() {
+    public static void CircleQueueDemo() {
 
 
-            ArrayQueue arrayQueue = new ArrayQueue(5);
+            CircleArrayQueue circleArrayQueue = new CircleArrayQueue(5);
             char input;
             System.out.println("队列测试");
 
@@ -31,7 +31,7 @@ public class ArrayQueueDemo {
                 try {
                 switch (input) {
                     case 's':
-                        arrayQueue.showQueue();
+                        circleArrayQueue.showQueue();
                         break;
                     case 'e':
                         scanner.close();
@@ -40,18 +40,18 @@ public class ArrayQueueDemo {
                     case 'a':
                         System.out.println("请输入进入队列的数字：");
                         int value = scanner.nextInt();
-                        arrayQueue.addQueue(value);
+                        circleArrayQueue.addQueue(value);
 
-                        arrayQueue.showQueue();
+                        circleArrayQueue.showQueue();
                         break;
                     case 'g':
-                        int queue = arrayQueue.getQueue();
+                        int queue = circleArrayQueue.getQueue();
                         System.out.println("取出的数据是：" + queue);
-                        arrayQueue.showQueue();
+                        circleArrayQueue.showQueue();
 
                         break;
                     case 'h':
-                        arrayQueue.showQueueHead();
+                        circleArrayQueue.showQueueHead();
                         break;
                     default:
                         break;
