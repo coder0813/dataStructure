@@ -7,7 +7,7 @@ import java.util.List;
 
 public class SingleLinkedList {
 
-    private final StudentNode headNode = new StudentNode(0, "");
+    public static final StudentNode headNode = new StudentNode(0, "");
 
     private static HashMap<Integer, String> hashMap = new HashMap<>();
 
